@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <!-- Navbar -->
+      <nav>
+        <div class="logo">
+          <img src="images/logo.png" alt="logo" />
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">Modern</a></li>
+            <li><a href="#">Expensive</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Main Content -->
+      <div class="information">
+        <div class="overlay"></div>
+        <img src="images/mobile.png" alt="monile" class="mobile" />
+        <!-- Circle -->
+        <div id="circle">
+          <div id="f1" class="feature one">
+            <img src="images/camera.png" alt="camera" />
+            <div>
+              <h1>Camera</h1>
+              <p>12MP, Gen 4 Vector Camera</p>
+            </div>
+          </div>
+          <div id="f2" class="feature two">
+            <img src="images/processor.png" alt="processor" />
+            <div>
+              <h1>Processor</h1>
+              <p>4.5 GHZ Base Clock Speed</p>
+            </div>
+          </div>
+          <div id="f3" class="feature three">
+            <img src="images/display.png" alt="display" />
+            <div>
+              <h1>Display</h1>
+              <p>4k Amoled Gorilla 3</p>
+            </div>
+          </div>
+          <div id="f4" class="feature four">
+            <img src="images/battery.png" alt="battery" />
+            <div>
+              <h1>Battery</h1>
+              <p>5900 mAh, 130Hrs, Mars Water</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Controls -->
+      <div class="controls">
+        <img src="images/arrow.png" alt="up-arrow" id="upbtn" />
+        <h3>Features</h3>
+        <img src="images/arrow.png" alt="down-arrow" id="downbtn" />
+      </div>
+    </div>
+
+    <footer>
+      <p>Bilal Arain</p>
+      <p id="fp">git: @thedevelop3r</p>
+    </footer>
+
+    <!-- Functional Buttons - Interactive -->
+    <script>
+      // element reference
+      let f1 = document.getElementById("f1");
+      let f2 = document.getElementById("f2");
+      let f3 = document.getElementById("f3");
+      let f4 = document.getElementById("f4");
+
+      let elements = [f1, f2, f3, f4];
+      let state = 0;
+      elements[state].classList.add("active");
+      //control
+      let upBtn = document.getElementById("upbtn");
+      let downBtn = document.getElementById("downbtn");
+
+      // for up button
+      upBtn.onclick = function () {
+        if (state == 0) {
+          elements[state].classList.remove("active");
+          state = 3;
+          elements[state].classList.add("active");
+          return;
+        }
+        elements[state].classList.remove("active");
+        state -= 1;
+        elements[state].classList.add("active");
+      };
+
+      downBtn.onclick = function () {
+        if (state == 3) {
+          elements[state].classList.remove("active");
+          state = 0;
+          elements[state].classList.add("active");
+          return;
+        }
+        elements[state].classList.remove("active");
+        state += 1;
+        elements[state].classList.add("active");
+      };
+    </script>
+  </body>
+</html>

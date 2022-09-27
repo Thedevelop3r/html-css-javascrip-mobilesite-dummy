@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Main Background and styling */
+.main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, #9c27b0, #8ecdff);
+}
+/* Navbar Styling */
+nav {
+  width: 80%;
+  position: sticky;
+  margin: 20px auto;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  flex-basis: 20%;
+}
+.logo img {
+  width: 150px;
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main Content Styling */
+
+.information {
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+#circle {
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  top: 32px;
+  left: -243px;
+  border-radius: 50%;
+  transform: rotate(0deg);
+}
+
+.feature img {
+  width: 70px;
+}
+.feature {
+  position: absolute;
+  display: flex;
+  color: #fff;
+  top: 40%;
+  right: 10%;
+}
+
+.feature div {
+  margin-left: 8px;
+  width: 200px;
+}
+.feature div p {
+  margin-top: 8px;
+}
+
+.one {
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+.two {
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+.three {
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+.four {
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+/* Mobile img styling */
+
+.mobile {
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 13%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* Controls */
+
+.controls {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.controls h3 {
+  margin: 15px 0;
+  color: #fff;
+}
+
+/* buttons */
+
+#upbtn {
+  width: 15px;
+  cursor: pointer;
+}
+#downbtn {
+  width: 15px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+/* Animating */
+.active {
+  opacity: 1;
+}
+
+.overlay {
+  width: 0;
+  height: 0;
+  border-top: 500px solid #fff;
+  border-left: 500px solid #fff;
+  border-bottom: 500px solid #fff;
+  border-right: 500px solid transparent;
+  position: absolute;
+  top: 0;
+  left: -294px;
+}
+
+
+/* footer */
+
+
+footer{
+  position: absolute;
+  bottom: 2%;
+  right: 10%;
+  color: #fff;
+  
+}
+
+footer p{
+    font-size: 24px;
+    font-family: 'Great Vibes', cursive;
+}
+
+#fp{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
